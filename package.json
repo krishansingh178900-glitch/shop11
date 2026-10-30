@@ -1,0 +1,49 @@
+{
+  "name": "smart-retail-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbo -p 3000",
+    "dev:webpack": "next dev -p 3000",
+    "build": "node scripts/prepare-prisma.mjs && next build",
+    "postinstall": "node scripts/prepare-prisma.mjs",
+    "start": "next start -p 3000",
+    "lint": "next lint",
+    "prisma:generate": "node scripts/prepare-prisma.mjs",
+    "prisma:push": "prisma db push",
+    "prisma:seed": "node scripts/seed.mjs",
+    "supabase:push": "prisma db push --schema=prisma/schema.postgresql.prisma",
+    "supabase:studio": "prisma studio --schema=prisma/schema.postgresql.prisma",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.21.1",
+    "@supabase/supabase-js": "^2.109.0",
+    "bcryptjs": "^2.4.3",
+    "clsx": "^2.1.1",
+    "html5-qrcode": "^2.3.8",
+    "jose": "^5.9.6",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.4",
+    "lucide-react": "^0.453.0",
+    "next": "^14.2.16",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.13.0",
+    "tailwind-merge": "^2.5.4",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20.17.0",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "prisma": "^5.21.1",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.3"
+  }
+}
